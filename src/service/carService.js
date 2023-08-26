@@ -1,6 +1,7 @@
 const { MongoClient, ObjectId } = require('mongodb');
+require('dotenv').config();
 
-const uri = 'mongodb+srv://paaai:bxb9hni5k1FTOHjx@cluster0.xfch9m1.mongodb.net/?retryWrites=true&w=majority';
+const uri = process.env.CONNECTION_STRING
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 async function getCars() {

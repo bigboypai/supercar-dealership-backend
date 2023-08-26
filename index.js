@@ -1,13 +1,24 @@
+// Requires
 const express = require('express');
-const bodyParser = require('body-parser');
+const cors = require('cors');
+const rateLimit = require('express-rate-limit');
+require('dotenv').config();
 
 const carController = require('./src/controller/carController');
 
 const app = express();
-const port = process.env.port || 3000;
+const port = process.env.PORT;
 
-app.use(bodyParser.json());
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // Max requests per windowMs
+    message: 'Too many requests from this IP, please try again later.',
+});
 
+
+// Middleware
+app.use(limiter);
+app.use(cors());
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).json({ message: 'Internal Server Error' });

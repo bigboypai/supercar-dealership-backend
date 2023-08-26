@@ -18,3 +18,18 @@
 
 # The data access layer manages interactions with the data storage system.
 #   The data access layer could be MongoDB driver.
+
+
+###### Things learnt ######
+
+# 3 layer architecture REST API
+# Middleware, .env secrets
+# Express routing
+# Rate limiting to prevent DoS attacks.
+
+
+###### To implement ######
+
+# 1. JWT authentication
+# 2. More error handling
+# 3. Containerize the image of this server
