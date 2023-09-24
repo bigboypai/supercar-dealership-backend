@@ -12,3 +12,10 @@
 
 # The data access layer manages interactions with the data storage system.
 # The data access layer could be MongoDB driver.
+
+# Main tasks completed:
+
+# 1. Create the node server
+# 2. Set the API routing
+# 3. Do the database implementation
+# 4. React frontend app
