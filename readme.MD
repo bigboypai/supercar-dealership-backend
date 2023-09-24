@@ -1,35 +1,14 @@
-# 3 layer architecture for building REST APIs #
+# In this API, I have implemented different libraries for sake of time and complexity. One of these libraries is Express. It has let me implement routing, rate limiter to prevent DoS attacks and such.
 
-# This architecure divides our API into the following layers.
+# The app has been deployed using Docker Compose using a lite version of Node called Alpine.
+
+# MongoDB has been selected as the default database as it provides free hosting in Atlas, an easy way to modify the database documents using their driver and its quick performance.
+
+# Further researching at the application planning, I found the  3 layer architecture for building REST APIs. This architecure divides our API into the following layers.
 
 # The API layer (controllers) handles routing, request processing, and response generation.
-# Responsabilities:
-#   1. Maps URLs to specific endpoints (Controller methods.)
-#   2. Requests parsing: Extracts data from incoming requests (query params, req bodies, etc)
-#   3. Response generation: Creates appropriate HTTP responses with status codes and content
-
 
 # The business logic layer (services) contains the core logic of the application, including business rules and data processing.
-# Responsabilities:
-#   1. Implement business rules
-#   2. Data manipulation: Interact with the data (read or modify)
-#   3. Validation: Checks the validity of the incoming data.
-
 
 # The data access layer manages interactions with the data storage system.
-#   The data access layer could be MongoDB driver.
-
-
-###### Things learnt ######
-
-# 3 layer architecture REST API
-# Middleware, .env secrets
-# Express routing
-# Rate limiting to prevent DoS attacks.
-
-
-###### To implement ######
-
-# 1. JWT authentication
-# 2. More error handling
-# 3. Containerize the image of this server
+# The data access layer could be MongoDB driver.
