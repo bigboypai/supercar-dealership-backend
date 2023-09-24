@@ -26,6 +26,6 @@ app.use((err, req, res, next) => {
 
 
 app.use('/api', carController);
-app.listen(port, () => {
+app.listen(port || 5000, () => {
     console.log('listening on port' + ' ' + port)
 })
